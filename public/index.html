@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 1</title>
+</head>
+<body>
+    <h2>Форма введення даних користувача</h2>
+
+    <form action="process.php" method="POST">
+        <div>
+            <label for="first_name">Ім'я:</label><br>
+            <input type="text" id="first_name" name="first_name" required>
+        </div>
+        <br>
+        <div>
+            <label for="last_name">Прізвище:</label><br>
+            <input type="text" id="last_name" name="last_name" required>
+        </div>
+        <br>
+        <button type="submit">Надіслати</button>
+    </form>
+</body>
+</html>
