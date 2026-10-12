@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №4: Кешування у Web</title>
+    <link rel="stylesheet" href="client-asset.php">
+</head>
+<body>
+    <div class="card" style="max-width: 800px; margin: 40px auto;">
+        <h1>Лабораторна робота №4: Кешування у Web</h1>
+        <p>Перелік реалізованих механізмів кешування:</p>
+
+        <ul style="line-height: 1.8;">
+            <li>
+                <strong>Клієнтське кешування (Приклад 1 — CSS):</strong>
+                Файл стилів <code>client-asset.php</code> віддається із заголовком
+                <code>Cache-Control: public, max-age=86400</code>.
+            </li>
+            <li>
+                <strong>Клієнтське кешування (Приклад 2 — Зображення):</strong><br>
+                <!-- Ось правильний рядок — саме він має бути -->
+<img src="client-image.php" alt="Cached Asset 2"
+     style="margin: 10px 0; border-radius: 6px; display: block;">
+                <em>Зображення вище (<code>client-image.php</code>) кешується браузером на 2 дні.
+                Перевірте вкладку Network → Size має показувати <code>(from disk cache)</code>
+                або <code>(memory cache)</code>.</em>
+            </li>
+            <li>
+                <strong>Серверне файлове кешування:</strong>
+                <a href="generate-report.php" target="_blank">Відкрити звіт (generate-report.php)</a>
+                — генерація 1000 рядків таблиці із затримкою <code>sleep(3)</code>
+                та збереженням у файл на 10 хвилин.
+            </li>
+            <li>
+                <strong>Серверне кешування через сесію:</strong>
+                <a href="session-cache.php" target="_blank">Відкрити курс валют (session-cache.php)</a>
+                — збереження даних у <code>$_SESSION</code> з обмеженням часу.
+            </li>
+            <li>
+                <strong>Серверне кешування через статичну властивість класу:</strong>
+                <a href="class-cache.php" target="_blank">Відкрити клас-кеш (class-cache.php)</a>
+                — збереження у пам'яті за допомогою статичної властивості.
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
